@@ -12,6 +12,11 @@ class Ball {
 	Ball(float _x, float _y) {
 		x = _x;
 		y = _y;
+		int ranChangeX = random(0, 1) <= 0.5 ? -1 : 1;
+		int ranChangeY = random(0, 1) <= 0.5 ? -1 : 1;
+
+		speedX *= ranChangeX;
+		speedY *= ranChangeY;
 	}
 
 	// The draw function
